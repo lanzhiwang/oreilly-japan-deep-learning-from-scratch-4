@@ -25,7 +25,7 @@ for run in range(runs):
 
 avg_rates = np.average(all_rates, axis=0)
 
-plt.ylabel('Rates')
-plt.xlabel('Steps')
+plt.ylabel("Rates")
+plt.xlabel("Steps")
 plt.plot(avg_rates)
 plt.show()

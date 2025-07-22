@@ -1,6 +1,7 @@
-if '__file__' in globals():
+if "__file__" in globals():
     import os, sys
-    sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
+
+    sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
 from collections import defaultdict
 from common.gridworld import GridWorld
 from ch04.policy_eval import policy_eval
@@ -53,7 +54,7 @@ def policy_iter(env, gamma, threshold=0.001, is_render=True):
     return pi
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     env = GridWorld()
     gamma = 0.9
     pi = policy_iter(env, gamma)

@@ -1,6 +1,7 @@
-if '__file__' in globals():
+if "__file__" in globals():
     import os, sys
-    sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
+
+    sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
 import numpy as np
 import gym
 import torch
@@ -77,7 +78,7 @@ class Agent:
         self.optimizer_pi.step()
 
 
-env = gym.make('CartPole-v0')
+env = gym.make("CartPole-v0")
 agent = Agent()
 reward_history = []
 

@@ -1,6 +1,7 @@
-if '__file__' in globals():
+if "__file__" in globals():
     import os, sys
-    sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
+
+    sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
 from collections import defaultdict, deque
 import numpy as np
 from common.gridworld import GridWorld
