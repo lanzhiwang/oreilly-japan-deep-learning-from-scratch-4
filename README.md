@@ -76,3 +76,21 @@ $ python actor_critic.py
 https://github.com/oreilly-japan/deep-learning-from-scratch-4/wiki/errata
 
 本ページに掲載されていない誤植など間違いを見つけた方は、[japan@oreilly.co.jp](<mailto:japan@oreilly.co.jp>)までお知らせください。
+
+
+```bash
+python -m venv .venv
+
+source .venv/bin/activate
+deactivate
+
+pip install torch==2.7.1 torchaudio==2.7.1 torchvision==0.22.1 --index-url https://download.pytorch.org/whl/cpu
+
+pip install -r requirements.txt
+
+pip install "black[jupyter]"
+
+find . -name "*.py" -exec black {} \;
+
+find . -name "*.ipynb" -exec black {} \;
+```
