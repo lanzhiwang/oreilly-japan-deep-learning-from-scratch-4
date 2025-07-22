@@ -5,7 +5,10 @@ import matplotlib.pyplot as plt
 class Bandit:
     def __init__(self, arms=10):
         """
-        
+        初始化参数 arms. arms 的意思是"臂的数量", 在这个问题上, 它相当于"老虎机的台数".
+        老虎机的台数默认被设置为 10.
+
+        生成 10 个 0 到 1 之间的随机数
         """
         self.rates = np.random.rand(arms)
 
@@ -57,9 +60,17 @@ if __name__ == "__main__":
     plt.ylabel("Total reward")
     plt.xlabel("Steps")
     plt.plot(total_rewards)
-    plt.show()
+    plt.savefig("bandit_total_reward.png")
+    # plt.show()
 
     plt.ylabel("Rates")
-    plt.xlabel("Steps")
+    # plt.xlabel("Steps")
     plt.plot(rates)
-    plt.show()
+    plt.savefig("bandit_rates.png")
+    # plt.show()
+
+"""
+$ python bandit.py
+881
+$
+"""

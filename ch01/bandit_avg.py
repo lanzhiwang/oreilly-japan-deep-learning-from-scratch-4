@@ -6,6 +6,22 @@ from bandit import Bandit, Agent
 runs = 200
 steps = 1000
 epsilon = 0.1
+"""
+>>> all_rates = np.zeros((runs, steps))
+>>> all_rates
+array([[0., 0., 0., ..., 0., 0., 0.],
+       [0., 0., 0., ..., 0., 0., 0.],
+       [0., 0., 0., ..., 0., 0., 0.],
+       ...,
+       [0., 0., 0., ..., 0., 0., 0.],
+       [0., 0., 0., ..., 0., 0., 0.],
+       [0., 0., 0., ..., 0., 0., 0.]])
+>>> all_rates.size
+200000
+>>> all_rates.shape
+(200, 1000)
+>>>
+"""
 all_rates = np.zeros((runs, steps))  # (2000, 1000)
 
 for run in range(runs):
@@ -28,4 +44,5 @@ avg_rates = np.average(all_rates, axis=0)
 plt.ylabel("Rates")
 plt.xlabel("Steps")
 plt.plot(avg_rates)
+plt.savefig("bandit_avg_rates.png")
 plt.show()

@@ -82,6 +82,12 @@ https://github.com/oreilly-japan/deep-learning-from-scratch-4/wiki/errata
 python -V
 Python 3.12.1
 
+docker run -ti --rm --name deep-learning-from-scratch \
+-v ~/work/code/py_code/deep-learning/04-deep-learning-from-scratch-4:/04-deep-learning-from-scratch-4 \
+-w /04-deep-learning-from-scratch-4 \
+python:3.12.1-bullseye bash
+
+
 python -m venv .venv
 
 source .venv/bin/activate
@@ -96,4 +102,7 @@ pip install "black[jupyter]"
 find . -name "*.py" -exec black {} \;
 
 find . -name "*.ipynb" -exec black {} \;
+
+find . -name __pycache__ -exec rm -rf {} \;
+
 ```
