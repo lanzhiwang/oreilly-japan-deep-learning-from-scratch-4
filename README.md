@@ -79,6 +79,9 @@ https://github.com/oreilly-japan/deep-learning-from-scratch-4/wiki/errata
 
 
 ```bash
+python -V
+Python 3.12.1
+
 python -m venv .venv
 
 source .venv/bin/activate
